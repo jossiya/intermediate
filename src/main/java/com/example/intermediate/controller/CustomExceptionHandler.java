@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestControllerAdvice
 public class CustomExceptionHandler {
+
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleApiRequestException(MethodArgumentNotValidException ex) {
         List<RestApiException> errors=new ArrayList<>();
